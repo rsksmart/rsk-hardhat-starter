@@ -1,0 +1,9 @@
+/node_modules
+/package-lock.json
+/.rsk-testnet-block-rpc-response.json
+/.rsk-testnet-seed-phrase
+/flattened.sol
+/cache
+/artifacts
+/coverage.json
+/coverage/*
