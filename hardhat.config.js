@@ -9,10 +9,14 @@ and save it to file:
 
 npx mnemonics@1.1.3 > .rsk-testnet-seed-phrase
 */
-const rskTestnetSeedPhrase = fs.readFileSync('.rsk-testnet-seed-phrase', 'utf8').toString().trim();
-if (!rskTestnetSeedPhrase
-    || rskTestnetSeedPhrase.split(' ').length !== 12) {
-  throw new Error('Put valid BIP-39 seed phrase in a file ".rsk-testnet-seed-phrase"');
+const rskTestnetSeedPhrase = fs
+  .readFileSync('.rsk-testnet-seed-phrase', 'utf8')
+  .toString()
+  .trim();
+if (!rskTestnetSeedPhrase || rskTestnetSeedPhrase.split(' ').length !== 12) {
+  throw new Error(
+    'Put valid BIP-39 seed phrase in a file ".rsk-testnet-seed-phrase"',
+  );
 }
 
 /*
@@ -34,9 +38,13 @@ const rskTestnetMinimumGasPrice = parseInt(
   JSON.parse(rskTestnetBlockRpcResponse).result.minimumGasPrice,
   16,
 );
-if (typeof rskTestnetMinimumGasPrice !== 'number'
-    || isNaN(rskTestnetMinimumGasPrice)) {
-  throw new Error('unable to retrieve network gas price from .rsk-testnet-block-rpc-response.json');
+if (
+  typeof rskTestnetMinimumGasPrice !== 'number' ||
+  isNaN(rskTestnetMinimumGasPrice)
+) {
+  throw new Error(
+    'unable to retrieve network gas price from .rsk-testnet-block-rpc-response.json',
+  );
 }
 // console.log("Minimum gas price for RSK Testnet: " + rskTestnetMinimumGasPrice);
 
@@ -63,7 +71,7 @@ module.exports = {
         // Ref: https://developers.rsk.co/rsk/architecture/account-based/#derivation-path-info
         path: "m/44'/60'/0'/0",
         // path: "m/44'/37310'/0'/0",
-initialIndex: 0,
+        initialIndex: 0,
         count: 10,
       },
     },

@@ -2,9 +2,9 @@
 
 ## Get started
 
-(1) Fork this repo on github, and clone it with git
+(1) Fork this repo on GitHub, and clone it with git
 
-Press the "Fork" button in Github (top right of page).
+Press the "Fork" button in GitHub (top right of page).
 
 Open a terminal:
 
@@ -153,7 +153,7 @@ Press the "Verify" button.
 You should see "Contract verification successful".
 
 Click on "Go to contract page".
-Click ont he "Code" tab, which now has a check mark next to it.
+Click on the "Code" tab, which now has a check mark next to it.
 You should now see:
 - Contract ABI
 - Contract Source

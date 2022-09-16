@@ -1,14 +1,4 @@
-const { ethers, network } = require('hardhat');
-
-async function deployContract(name, ...params) {
-  const ContractFactory = await ethers.getContractFactory(name);
-  const contract = await ContractFactory.deploy(...params);
-  await contract.deployed();
-  console.log(
-    `'${name}' was deployed on ${network.name} with address ${contract.address}`,
-  );
-  return contract;
-}
+const { deployContract } = require('../util');
 
 async function main() {
   try {
