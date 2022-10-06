@@ -12,6 +12,16 @@ Open a terminal:
 git clone git@github.com:YOURNAME/rsk-hardhat-starter.git
 ```
 
+Start in the repo:
+
+```shell
+cd rsk-hardhat-starter
+npm install
+```
+
+Note that installing the dependencies can take
+several minutes.
+
 (2) Generate a seed phrase to use in RSK Testnet
 
 ```shell
@@ -77,9 +87,21 @@ For example
 
 (6) Compile the smart contracts
 
+This "empties" the results of any previous build/ compilation.
+
+```shell
+npm run clean
+```
+
+Then this uses `solc` to compile the smart contracts.
+
 ```shell
 npm run compile
 ```
+
+You should see the following output:
+
+> Compiled 2 Solidity files successfully
 
 ... Now give yourself a pat on the back,
 you're about halfway there!
