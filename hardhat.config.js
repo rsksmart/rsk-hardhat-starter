@@ -7,15 +7,17 @@ require('@nomiclabs/hardhat-waffle');
 Issue the following command to generate a BIP-39 seed phrase
 and save it to file:
 
-npx mnemonics@1.1.3 > .rsk-testnet-seed-phrase
+npm run new-rsktestnet-seed-phrase
+OR
+npx mnemonics@1.1.3 > .rsktestnet-seed-phrase
 */
 const rskTestnetSeedPhrase = fs
-  .readFileSync('.rsk-testnet-seed-phrase', 'utf8')
+  .readFileSync('.rsktestnet-seed-phrase', 'utf8')
   .toString()
   .trim();
 if (!rskTestnetSeedPhrase || rskTestnetSeedPhrase.split(' ').length !== 12) {
   throw new Error(
-    'Put valid BIP-39 seed phrase in a file ".rsk-testnet-seed-phrase"',
+    'Put valid BIP-39 seed phrase in a file ".rsktestnet-seed-phrase"',
   );
 }
 

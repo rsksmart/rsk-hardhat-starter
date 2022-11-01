@@ -13,7 +13,7 @@
     "flatten": "hardhat flatten contracts/* > flattened.sol",
     "deploy-rsktestnet": "hardhat run scripts/deploy.js --network rsktestnet",
     "console-rsktestnet": "hardhat console --network rsktestnet",
-    "new-rsktestnet-seed-phrase": "mnemonics > .rsk-testnet-seed-phrase",
+    "new-rsktestnet-seed-phrase": "hardhat run scripts/setup-seed-phrase.js --network rsktestnet",
     "new-rsktestnet-block": "curl -X POST --silent -H \"Content-Type:application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_getBlockByNumber\",\"params\":[\"latest\", false],\"id\":1}' https://public-node.testnet.rsk.co/ > .rsk-testnet-block-rpc-response.json"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "ethereum-waffle": "3.4.4",
     "ethers": "5.6.2",
     "hardhat": "2.9.7",
-    "mnemonics": "1.1.3",
+    "bip39": "3.0.4",
     "prettier": "2.6.2",
     "prettier-plugin-solidity": "1.0.0-dev.22",
     "solidity-coverage": "0.7.21"
