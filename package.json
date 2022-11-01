@@ -14,7 +14,7 @@
     "deploy-rsktestnet": "hardhat run scripts/deploy.js --network rsktestnet",
     "console-rsktestnet": "hardhat console --network rsktestnet",
     "new-rsktestnet-seed-phrase": "hardhat run scripts/setup-seed-phrase.js --network rsktestnet",
-    "new-rsktestnet-block": "curl -X POST --silent -H \"Content-Type:application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_getBlockByNumber\",\"params\":[\"latest\", false],\"id\":1}' https://public-node.testnet.rsk.co/ > .rsk-testnet-block-rpc-response.json"
+    "new-rsktestnet-block": "hardhat run scripts/setup-latest-block.js --network rsktestnet"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "2.0.5",
